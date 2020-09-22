@@ -1,0 +1,114 @@
+/* css reset */
+*
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Courgette', cursive;
+}
+/* main section */
+#main
+{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+/* for dino section which will play */
+#player
+{
+    width: 190px;
+    height: 100px;
+    background-image: url(dino.png);
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    bottom: 30px;
+    left: 52px;
+}
+/* for dragon */
+#obstacles
+{
+    width: 100px;
+    height: 100px;
+    background-image: url(dragon.png);
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    bottom: 30px;
+    left: 652px;
+}
+/* for jumping  of dino */
+.playerAni
+{
+    animation: playerAnii 0.6s ;
+    animation-fill-mode: forwards;
+}
+@keyframes playerAnii{
+    0%
+    {
+        bottom: 30px;
+    }
+    50%
+    {
+        bottom : 400px;
+    }
+    
+    100%
+    {
+        bottom: 30px;
+    }
+}
+
+
+/* for getting drago move infinitely */
+.obstacleAni
+{
+    animation: obstacleAnii 5s  linear infinite;
+}
+@keyframes obstacleAnii
+{
+    0%
+    {
+        left: 110vw;
+    }
+    100%
+    {
+        left: -10vw;
+    }
+}
+
+/* for gameover */
+#gameover
+{
+    /* visibility: hidden; */
+    text-align: center;
+    font-size: 50px;
+}
+
+/* for score section */
+#score
+{
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: 1150px;
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 180px;
+    padding: 6px;
+}
+/* for getting animation when dino dies */
+.diedino
+{
+    animation: die 1s linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes die{
+100%
+{
+    bottom: -100px;
+}
+}
